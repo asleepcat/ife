@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>window.open</title>
+    <script type="text/javascript">
+        function $id(){
+           return document.getElementsById(id);
+        }
+        function Wopen(){
+        var con=confirm('确定打开页面么？');
+            if(con)
+                window.open('http://www.imooc.com');
+            else alert("不允许打开！")
+        }
+        function inputopen(){
+            var inputMsg=prompt("请输入你的年龄？")
+            if(inputMsg>=18)
+                alert("成年")
+            else
+            alert("未成年")
+        }
+    </script>
+</head>
+<body>
+<input name="button" type="button" onclick="Wopen()" value="新窗口打开网站"  />
+<button onclick="inputopen()">asdasd</button>
+<input name="button" type="button" onclick="inputopen()" value="fgfgfg"  />
+
+</body>
+</html>
