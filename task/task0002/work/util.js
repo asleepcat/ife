@@ -3,25 +3,25 @@
  */
 a=[1,"s","s"];
 //*********************************************************************************************
-//ÅĞ¶ÏÒ»¸ö¶ÔÏóÊÇ·ñÊÇÊı×é
+//åˆ¤æ–­ä¸€ä¸ªå¯¹è±¡æ˜¯å¦æ˜¯æ•°ç»„
 function isArray(arr){
     return Object.prototype.toString.call(arr) === '[object Array]';
 }
-//ÅĞ¶ÏÒ»¸öÀàĞÍÊÇ·ñÊÇº¯Êı
+//åˆ¤æ–­ä¸€ä¸ªç±»å‹æ˜¯å¦æ˜¯å‡½æ•°
 function isFunction(fun){
     return Object.prototype.toString.call(fun) === "[object Function]"
 }
 function testIs(){
     console.log(isArray(a));
 }
-//Éî¶È¿ËÂ¡¶ÔÏó£¬²ÉÓÃJsonĞòÁĞ»¯¶ÔÏóµÄ·½Ê½
+//æ·±åº¦å…‹éš†å¯¹è±¡ï¼Œé‡‡ç”¨Jsonåºåˆ—åŒ–å¯¹è±¡çš„æ–¹å¼
 function cloneObject(obj) {
     var str, newobj = obj.constructor === Array ? [] : {};
     if(typeof obj !== 'object'){
         return;
     } else if(window.JSON){
-        str = JSON.stringify(obj), //ÏµÁĞ»¯¶ÔÏó
-            newobj = JSON.parse(str); //»¹Ô­
+        str = JSON.stringify(obj), //ç³»åˆ—åŒ–å¯¹è±¡
+            newobj = JSON.parse(str); //è¿˜åŸ
     }
     else {
         for(var i in obj){
@@ -32,7 +32,7 @@ function cloneObject(obj) {
     return newobj;
 }
 
-// ²âÊÔÓÃÀı£º
+// æµ‹è¯•ç”¨ä¾‹ï¼š
 var srcObj = {
     a: 1,
     b: {
@@ -52,14 +52,14 @@ console.log(abObj.b.b1[0]);
 console.log(tarObj.a);      // 1
 console.log(tarObj.b.b1[0]);    // "hello"
 //*********************************************************************************************
-// ¶ÔÊı×é½øĞĞÈ¥ÖØ²Ù×÷£¬Ö»¿¼ÂÇÊı×éÖĞÔªËØÎªÊı×Ö»ò×Ö·û´®£¬·µ»ØÒ»¸öÈ¥ÖØºóµÄÊı×é
+// å¯¹æ•°ç»„è¿›è¡Œå»é‡æ“ä½œï¼Œåªè€ƒè™‘æ•°ç»„ä¸­å…ƒç´ ä¸ºæ•°å­—æˆ–å­—ç¬¦ä¸²ï¼Œè¿”å›ä¸€ä¸ªå»é‡åçš„æ•°ç»„
 function uniqArray(arr) {
     for(var i=0;i<arr.length;i++){
 
     }
 }
 
-// Ê¹ÓÃÊ¾Àı
+// ä½¿ç”¨ç¤ºä¾‹
 var a = [1, 3, 5, 7, 5, 3];
 var b = uniqArray(a);
 console.log(b); // [1, 3, 5, 7]
